@@ -11,9 +11,6 @@ const AssignByBar = ({ tableData = [], title = "Assign By" }) => {
   // useContext(ThemeContext)
   const colors = ["#345af4", "#292659", "#d1503f"];
 
- 
-
-
   // const asignData = [
   //   {
   //     name: "Open",
@@ -44,10 +41,10 @@ const AssignByBar = ({ tableData = [], title = "Assign By" }) => {
     },
   ];
 
-   const getMaxValue = () => {
-     let maxDataValue = Math.max(...asignData.flatMap((series) => series.data));
-     return Math.ceil(maxDataValue * 1.2); // Tambah 20% supaya tidak terlalu dekat
-   };
+  const getMaxValue = () => {
+    let maxDataValue = Math.max(...asignData.flatMap((series) => series.data));
+    return Math.ceil(maxDataValue * 1.2); // Tambah 20% supaya tidak terlalu dekat
+  };
 
   // const [mode, setMode] = useState('light')
 
@@ -77,9 +74,10 @@ const AssignByBar = ({ tableData = [], title = "Assign By" }) => {
   const barcharts = {
     chart: {
       type: "column",
-      height: 240,
+      // height: 240,
+      height: 220,
       marginTop: 80,
-      marginBottom: 60,
+      marginBottom: 30,
       backgroundColor: "transparent",
     },
     // xAxis: {
@@ -180,6 +178,37 @@ const AssignByBar = ({ tableData = [], title = "Assign By" }) => {
       style: {
         color: "white",
       },
+    },
+    responsive: {
+      rules: [
+        {
+          condition: { minWidth: 1536 },
+          chartOptions: {
+            chart: {
+              height: 310,
+              marginTop: 110,
+              marginBottom: 50,
+            },
+            title: {
+              style: { fontSize: "2.25rem" },
+            },
+            legend: {
+              x: -6,
+              itemStyle: { fontSize: "1.2rem" }, // Ukuran teks legend lebih kecil
+            },
+            plotOptions: {
+              column: {
+                dataLabels: {
+                  style: {
+                    fontSize: "1.1rem",
+                  },
+                },
+                maxPointWidth: 43,
+              },
+            },
+          },
+        },
+      ],
     },
 
     lang: {
