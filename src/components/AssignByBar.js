@@ -75,7 +75,7 @@ const AssignByBar = ({ tableData = [], title = "Assign By" }) => {
     chart: {
       type: "column",
       // height: 240,
-      height: 220,
+      height: 200,
       marginTop: 80,
       marginBottom: 30,
       backgroundColor: "transparent",
@@ -182,7 +182,7 @@ const AssignByBar = ({ tableData = [], title = "Assign By" }) => {
     responsive: {
       rules: [
         {
-          condition: { minWidth: 1536 },
+          condition: { minWidth: 1900 },
           chartOptions: {
             chart: {
               height: 310,
