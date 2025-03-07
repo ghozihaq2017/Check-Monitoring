@@ -182,15 +182,15 @@ const AssignByBar = ({ tableData = [], title = "Assign By" }) => {
     responsive: {
       rules: [
         {
-          condition: { minWidth: 1900 },
+          condition: { minWidth: 1850 },
           chartOptions: {
             chart: {
-              height: 310,
+              height: 270,
               marginTop: 110,
               marginBottom: 50,
             },
             title: {
-              style: { fontSize: "2.25rem" },
+              style: { fontSize: "1.875rem" },
             },
             legend: {
               x: -6,

@@ -8,7 +8,7 @@ export default function Dashboard() {
   return (
     <main className={montserrat.className}>
       <div className="w-screen h-screen bg-white px-16 3xl:px-4 3xl:py-4 py-8 flex flex-col gap-3">
-        <div id="top" className="w-full h-4/6  flex flex-row gap-3">
+        <div id="top" className="w-full h-[69%]  flex flex-row gap-3">
           <div
             id="status-redmine"
             className=" w-1/4 h-full flex flex-col gap-3"
@@ -17,7 +17,7 @@ export default function Dashboard() {
               id="status-ba"
               className=" bg-white w-full h-1/2 border border-[#d3d3d3] rounded-xl flex flex-col px-4 py-1 gap-1 3xl:px-6 3xl:py-3"
             >
-              <h2 className="text-2xl 3xl:text-4xl font-semibold">
+              <h2 className="text-2xl 3xl:text-3xl font-semibold">
                 Business Analyst
               </h2>
               <div className=" h-full grid grid-cols-2 gap-1 xl:gap-2 grid-rows-2">
@@ -73,7 +73,7 @@ export default function Dashboard() {
               id="status-dev"
               className=" bg-white w-full h-1/2 border border-[#d3d3d3] rounded-xl flex flex-col px-4 py-1 gap-1 3xl:px-6 3xl:py-3"
             >
-              <h2 className="text-2xl 3xl:text-4xl font-semibold">Developer</h2>
+              <h2 className="text-2xl 3xl:text-3xl font-semibold">Developer</h2>
               <div className=" h-full grid grid-cols-2 gap-1 xl:gap-2 grid-rows-2">
                 <div className="bg-[#f0f3f6] rounded-lg flex flex-row w-full h-full justify-center items-center">
                   <span className=" w-2/5 h-full flex justify-center items-center">
@@ -130,10 +130,10 @@ export default function Dashboard() {
               className="w-full h-2/5 border border-[#d3d3d3] rounded-xl px-4 py-1 3xl:px-6 3xl:py-3"
             >
               <div id="content">
-                <h2 className="text-2xl 3xl:text-4xl font-semibold">
+                <h2 className="text-2xl 3xl:text-3xl font-semibold">
                   Redmine Assign
                 </h2>
-                <p className="text-[#a1a1a1] text-sm 3xl:text-xl 3xl:mt-1">
+                <p className="text-[#a1a1a1] text-sm 3xl:text-lg">
                   List redmine yang belum di response selama 1 jam terakhir
                 </p>
               </div>
@@ -155,14 +155,16 @@ export default function Dashboard() {
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="text-sm">
+                  <tbody className="text-sm text-[#515151]">
                     <tr className="border-b border-[#d9d9d9] ">
                       <td className="px-4 py-1 text-xs 3xl:text-lg">#81234</td>
                       <td className="px-4 py-1 text-xs 3xl:text-lg">
                         25/02/2025 10:00:25
                       </td>
                       <td className="px-4 py-1 text-xs 3xl:text-lg">NO</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">05:06:23</td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        05:06:23
+                      </td>
                     </tr>
                     <tr className="border-b border-[#d9d9d9]">
                       <td className="px-4 py-1 text-xs 3xl:text-lg">#81234</td>
@@ -170,7 +172,9 @@ export default function Dashboard() {
                         25/02/2025 10:00:25
                       </td>
                       <td className="px-4 py-1 text-xs 3xl:text-lg">NO</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">05:06:23</td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        05:06:23
+                      </td>
                     </tr>
                     <tr className="border-[#d9d9d9]">
                       <td className="px-4 py-1 text-xs 3xl:text-lg">#81234</td>
@@ -178,7 +182,9 @@ export default function Dashboard() {
                         25/02/2025 10:00:25
                       </td>
                       <td className="px-4 py-1 text-xs 3xl:text-lg">NO</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">05:06:23</td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        05:06:23
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -189,10 +195,10 @@ export default function Dashboard() {
               className="w-full h-3/5 border border-[#d3d3d3] rounded-xl px-4 py-1 3xl:px-6 3xl:py-3"
             >
               <div id="content">
-                <h2 className="text-2xl font-semibold 3xl:text-4xl">
+                <h2 className="text-2xl font-semibold 3xl:text-3xl">
                   Redmine Approaching Due Date
                 </h2>
-                <p className="text-[#a1a1a1] text-sm 3xl:text-xl 3xl:mt-1">
+                <p className="text-[#a1a1a1] text-sm 3xl:text-lg">
                   List redmine yang mendekati due date
                 </p>
               </div>
@@ -214,42 +220,78 @@ export default function Dashboard() {
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="text-sm">
+                  <tbody className="text-sm text-[#515151]">
                     <tr className="border-b border-[#d9d9d9] ">
                       <td className="px-4 py-1 text-xs 3xl:text-lg">#81234</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">John Doe</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">Bank DKI</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">25/02/2025</td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        John Doe
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        Bank DKI
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        25/02/2025
+                      </td>
                     </tr>
                     <tr className="border-b border-[#d9d9d9] ">
                       <td className="px-4 py-1 text-xs 3xl:text-lg">#81234</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">John Doe</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">Bank DKI</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">25/02/2025</td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        John Doe
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        Bank DKI
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        25/02/2025
+                      </td>
                     </tr>
                     <tr className="border-b border-[#d9d9d9] ">
                       <td className="px-4 py-1 text-xs 3xl:text-lg">#81234</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">John Doe</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">Bank DKI</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">25/02/2025</td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        John Doe
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        Bank DKI
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        25/02/2025
+                      </td>
                     </tr>
                     <tr className="border-b border-[#d9d9d9] ">
                       <td className="px-4 py-1 text-xs 3xl:text-lg">#81234</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">John Doe</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">Bank DKI</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">25/02/2025</td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        John Doe
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        Bank DKI
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        25/02/2025
+                      </td>
                     </tr>
                     <tr className="border-b border-[#d9d9d9] ">
                       <td className="px-4 py-1 text-xs 3xl:text-lg">#81234</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">John Doe</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">Bank DKI</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">25/02/2025</td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        John Doe
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        Bank DKI
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        25/02/2025
+                      </td>
                     </tr>
                     <tr className=" border-[#d9d9d9] ">
                       <td className="px-4 py-1 text-xs 3xl:text-lg">#81234</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">John Doe</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">Bank DKI</td>
-                      <td className="px-4 py-1 text-xs 3xl:text-lg">25/02/2025</td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        John Doe
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        Bank DKI
+                      </td>
+                      <td className="px-4 py-1 text-xs 3xl:text-lg">
+                        25/02/2025
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -259,7 +301,7 @@ export default function Dashboard() {
         </div>
         <div
           id="bottom"
-          className="w-full h-2/6 border border-[#d3d3d3] rounded-xl  px-4 py-1"
+          className="w-full h-[31%] border border-[#d3d3d3] rounded-xl  px-4 py-1"
         >
           <AssignByBar />
         </div>
